@@ -4,8 +4,29 @@ print(9 ** 0.5 * 5)
 # 2nd program
 print(9.99 > 9.98 and 1000 != 1000.1)
 
+
 # 3rd program
-print(1234 % 1000 // 10 + 5678 % 1000 // 10)
+# Выводим результат 2 * 2 + 2 без приоритета
+result1 = 2 * 2 + 2
+print(result1)
+# Выводим результат 2 * 2 + 2 с приоритетом для сложения
+result2 = 2 * (2 + 2)
+print(result2)
+# Выводим результат сравнения двух выражений
+comparison_result = result1 == result2
+print(comparison_result)
 
 # 4th program
-print(int(13.42) == int(42.13 * 100) % 100 or int(13.42 * 100) % 100 == int(42.13))
+
+# Дана строка
+number_str = '123.456'
+# Преобразуем строку в дробное число
+number_float = float(number_str)
+# Умножаем на 10, чтобы сместить цифру после точки в целую часть
+number_shifted = number_float * 10  # 1234.56
+# Применяем int() для получения целой части
+integer_part = int(number_shifted)  # 1234
+# Используем остаточное деление на 10, чтобы получить первую цифру после точки
+first_digit_after_point = integer_part % 10  # 4
+# Выводим результат
+print(first_digit_after_point)
